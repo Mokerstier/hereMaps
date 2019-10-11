@@ -1,0 +1,20 @@
+{
+  "name": "manualtech",
+  "version": "1.0.0",
+  "description": "Service to add custom markers to a map",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "author": "Wouter van der Heijde",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "here-js-api": "^1.0.11"
+  }
+}
