@@ -11,6 +11,8 @@ const app = express();
 
 const { routes } = require('./routes/routes');
 
+
+
 app
     .use(urlencodedParser)
     .use(express.json())
@@ -19,6 +21,7 @@ app
     .use('/', routes)
     
     .set('view engine', 'ejs')
+    
 ;
 
 app.listen(port, () => console.log(`server is gestart op port ${port}`));
