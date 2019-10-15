@@ -152,9 +152,9 @@ Good job you can now send data to Adafruit!
 
 For a plug and play solution you can easily copy this repo locally and start modifing the nodejs application to your own liking!
 open your CLI and run de following commands:
-- git clone
-- touch .env
-- npm install
+- `git clone https://github.com/Mokerstier/hereMaps.git`
+- `touch .env`
+- `npm install`
 
 ### Step 5
 In your .env file you need to add 
