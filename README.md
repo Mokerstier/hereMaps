@@ -161,3 +161,6 @@ In your .env file you need to add
 - `PORT = 3000`
 - `ADA_FEED_KEY = {YOUR_ADAFRUIT_AIO_KEY}`
 
+You might need to make changes in the code here:
+https://github.com/Mokerstier/hereMaps/blob/d8e5186b061b5aa0bb562ed498561c4d13c9bb2d/routes/routes.js#L5
+if you're using other feednames.
