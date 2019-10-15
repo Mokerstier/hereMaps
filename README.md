@@ -17,12 +17,12 @@ First set up your ESP32
 - Connect the wires
   - GROUND connects with GND (usually the black wire)
   - VCC connects with VIN(5v) (usually the red wire)
-  - SIG connects with D27 (usually the yellow wire)
+  - SIG connects with D32 (usually the yellow wire) _Make sure to choose this pin because other pins will fail when using analogRead when using a wifi connection._
 
 ### CHECKPOINT 1
 If you connected the wires you can test if your Light Sensor is working with the following code:
 ```javascript
-#define LIGHT_SENSOR 27
+#define LIGHT_SENSOR 32
 
 void setup() {
 Serial.begin(115200);
@@ -41,7 +41,17 @@ If everything is working corectly your Serialmonitor would log somethign like th
 `4095` <- (Max value = loads of light)
 
 Well done you completed step 1
+### Step 2
+Create a dashboard on [Adafruit](https://io.adafruit.com/) with 3 feeds.
+
+- One for the Sensor that you want to display on the map for this project we will be using a Stream-block
+- Another for latitude (StreamBlock)
+- Another for longtitude (StreamBlock)
+
+If you navigate to Feeds on your adafruit and select view all you will see a list of all your feeds like the image below.
+Under the key tab you'll find the keys specific to each feed copy these keys you will need them in the next step!
 
 ### Step 3
-Connect your ESP32 to the internet and establish a connection with adafruit
+Connect your ESP32 to the internet and establish a connection with adafruit.
+
 
