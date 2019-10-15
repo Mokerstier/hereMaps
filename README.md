@@ -123,7 +123,7 @@ remember those feed keys you had to keep track on earlier?
 This where you will be using them!
 At: `io.feed("streemdata");`
 You actually send the data with: `streemdata->save(sensorValue);`
-### CHECKPOINT 2
+
 ```
 void sendData(){
 
@@ -143,6 +143,21 @@ void readData(){
   sendData();
 }
 ```
-
+### CHECKPOINT 2
 If you this working your adafruit should be looking something like this:
 ![StreamData](https://github.com/Mokerstier/hereMaps/blob/master/images/io.adafruit.com_Mokerstier_feeds%20(1).png?raw=true)
+Good job you can now send data to Adafruit!
+
+### Step 4
+
+For a plug and play solution you can easily copy this repo locally and start modifing the nodejs application to your own liking!
+open your CLI and run de following commands:
+- git clone
+- touch .env
+- npm install
+
+### Step 5
+In your .env file you need to add 
+- `PORT = 3000`
+- `ADA_FEED_KEY = {YOUR_ADAFRUIT_AIO_KEY}`
+
