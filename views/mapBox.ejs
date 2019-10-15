@@ -12,14 +12,16 @@ body { margin:0; padding:0; }
 </style>
 </head>
 <body>
-<h1> <%= data.value %></h1>
+<h1> <%= valueData.value %></h1>
 <div id='map'></div>
 
 <script src="heremap.js"></script>
 <script>
 var size = 75; 
 var color;
-var value = '<%= data.value%>';
+var value = '<%= valueData%>';
+var lat = Number('<%=latData%>')
+var lon = Number('<%=lonData%>')
 if (value > 500){
     color = 'rgba(255, 100, 100, 1)';
 } else {
@@ -88,7 +90,7 @@ map.on('load', function () {
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [ 4.894496, 52.371736]
+                        "coordinates": [ lat, lon]
                     }
                 }]
             }
