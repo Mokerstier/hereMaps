@@ -34,7 +34,7 @@ Serial.println("Data from LIGHT_SENSOR is:");
 Serial.println(sensorValue);
 }
 ```
-If everything is working corectly your Serialmonitor would log somethign like this:
+If everything is working corectly your Serialmonitor would log something like this:
 
 `Data from LIGHT_SENSOR is:`
 
@@ -50,8 +50,14 @@ Create a dashboard on [Adafruit](https://io.adafruit.com/) with 3 feeds.
 
 If you navigate to Feeds on your adafruit and select view all you will see a list of all your feeds like the image below.
 Under the key tab you'll find the keys specific to each feed copy these keys you will need them in the next step!
+![Screenshot of adafruit - Feed list](https://github.com/Mokerstier/hereMaps/blob/master/images/io.adafruit.com_Mokerstier_feeds.png?raw=true)
 
 ### Step 3
 Connect your ESP32 to the internet and establish a connection with adafruit.
-
+Before you are able to connect your ESP32 to adafruit you'll have to download their library:
+ navigate to -> `tools` -> `Manage libraries` and search for __Adafruit IO Arduino__
+ ![Adafruit libraries](https://github.com/Mokerstier/hereMaps/blob/master/images/Group.png?raw=true)
+ 
+When you installed the librarie you can now set up your adafruit connection. For purpose of better structure in your files we are gonna make  adifferent tab on your arduino we'll call it `config.h`. See the image below.
+![Screenshot of different tab](https://github.com/Mokerstier/hereMaps/blob/master/images/Group%202.png?raw=true)
 
