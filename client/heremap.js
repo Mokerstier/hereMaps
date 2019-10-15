@@ -1,19 +1,8 @@
-
-console.log("connected");
-    
-    var platform = new H.service.Platform({
-    'apikey': 'pZztGd4sFMZ3vD8szXbb'
-    });
-
-    // Obtain the default map types from the platform object
-    var maptypes = platform.createDefaultLayers();
-
-    // Instantiate (and display) a map object:
-    var map = new H.Map(
-    document.getElementById('mapContainer'),
-    maptypes.vector.normal.map,
-    {
-      zoom: 10,
-      center: { lng: 52.4, lat: 5.51 }
-    });
+mapboxgl.accessToken = 'pk.eyJ1IjoibW9rZXJzdGllciIsImEiOiJjazFxbm5za2sxMWE2M2NwZGNncGFzazZlIn0.0oOI9FSQB1saUbuCqq9nCw';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+center:  [4.90, 52.37], // starting position [lng, lat]
+zoom: 11 // starting zoom
+});
 
