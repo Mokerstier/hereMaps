@@ -185,3 +185,7 @@ When your node server is running without any problems you can open the browser a
 You should be able to see a map with a marker as in the image below!
 ![Screenshot of map in the browser](https://github.com/Mokerstier/hereMaps/blob/master/images/localhost_3000_%20(1).png?raw=true)
 _When you hover the marker the Value of your sensor will appear in a popup!_
+
+The possabillitys with mapBox are endless for further details and more maps customisation take a look at their documentation:
+[Examples](https://docs.mapbox.com/mapbox-gl-js/examples/)
+[Documentation/Usage](https://docs.mapbox.com/mapbox-gl-js/api/)
