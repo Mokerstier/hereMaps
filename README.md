@@ -40,7 +40,7 @@ If everything is working corectly your Serialmonitor would log something like th
 
 `4095` <- (Max value = loads of light)
 
-Well done you completed step 1
+Well done you completed step 1 and your sensors are working!
 ### Step 2
 Create a dashboard on [Adafruit](https://io.adafruit.com/) with 3 feeds.
 
@@ -59,7 +59,7 @@ Before you are able to connect your ESP32 to adafruit you'll have to download th
  navigate to -> `tools` -> `Manage libraries` and search for __Adafruit IO Arduino__
  ![Adafruit libraries](https://github.com/Mokerstier/hereMaps/blob/master/images/Group.png?raw=true)
  
-When you installed the librarie you can now set up your adafruit connection. For purpose of better structure in your files we are gonna make  adifferent tab on your arduino we'll call it `config.h`. See the image below.
+When you installed the library you can now set up your adafruit connection. For purpose of better structure in your files we are gonna make  adifferent tab on your arduino we'll call it `config.h`. See the image below.
 ![Screenshot of different tab](https://github.com/Mokerstier/hereMaps/blob/master/images/Group%202.png?raw=true)
 
 _Don't forget to include it at the top of your file because you will need it when you run your code_
@@ -117,6 +117,7 @@ Serial.println(io.statusText());
 ```
 
 When the connection is established your serial monitor will tell you!
+
 Now lets start sending data to adafruit!
 _Make sure to be consistant in your variable names and feed names_
 remember those feed keys you had to keep track on earlier?
@@ -162,5 +163,25 @@ In your .env file you need to add
 - `ADA_FEED_KEY = {YOUR_ADAFRUIT_AIO_KEY}`
 
 You might need to make changes in the code here:
-https://github.com/Mokerstier/hereMaps/blob/d8e5186b061b5aa0bb562ed498561c4d13c9bb2d/routes/routes.js#L5
+routes/routes.js
+        `https://io.adafruit.com/api/v1/feeds/streemdata/data/last?x-aio-key=${process.env.ADA_FEED_KEY}`
+    );
+    let lonCall = await fetch(
+        `https://io.adafruit.com/api/v1/feeds/londata/data/last?x-aio-key=${process.env.ADA_FEED_KEY}`
+    );
+    let latCall = await fetch(
+        `https://io.adafruit.com/api/v1/feeds/latdata/data/last?x-aio-key=${process.env.ADA_FEED_KEY}`
+
 if you're using other feednames.
+
+When step 5 is completed you can start the server by running:
+
+`npm run test`
+
+In the CLI
+
+### CHECKPOINT 3
+When your node server is running without any problems you can open the browser and navigate to [localhost:3000](http://localhost:3000)
+You should be able to see a map with a marker as in the image below!
+![]()
+_When you hover the marker the Value of your sensor will appear in a popup!_
