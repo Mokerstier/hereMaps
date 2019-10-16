@@ -183,5 +183,5 @@ In the CLI
 ### CHECKPOINT 3
 When your node server is running without any problems you can open the browser and navigate to [localhost:3000](http://localhost:3000)
 You should be able to see a map with a marker as in the image below!
-![]()
+![Screenshot of map in the browser](https://github.com/Mokerstier/hereMaps/blob/master/images/localhost_3000_%20(1).png?raw=true)
 _When you hover the marker the Value of your sensor will appear in a popup!_
