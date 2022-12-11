@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "here-js-api": "^1.0.11",
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.3",
